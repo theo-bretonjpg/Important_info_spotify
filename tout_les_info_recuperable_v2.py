@@ -4,14 +4,14 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy.util as util
 import simplejson as json  #pour manipuler les réponses json 
 import json
-from CONFIG_SPOTIPY_AXEL import * #le fichier config
+from CONFIG_SPOTIPY import * #le fichier config
 import pandas as pd
 
 #recuperation de token.
 token = util.prompt_for_user_token(username,scope='playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private',client_id=clientid,client_secret=clientsecret,redirect_uri='http://localhost/')
 
 
-path= "C:/01__work/01__T2N-CORPORATION-JOB-ALTERNANCE/spotify_project/FICHIER_TEST_YELOTELO/tout_les_info_recuperable_v1/"
+path= "ENTER FILE LOCATION"
 
 Spf_Artist= list()
 Spf_Genre= list()
