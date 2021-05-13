@@ -1,3 +1,12 @@
+#-------------------------------------------------------------------------------------------
+# Fonction : Code qui permet de recuperer des informations sur un artiste venant de spotify 
+#            utilise un fichier de configuration pour le username, client id et client secret
+# Entree   : URI de l'artiste
+# Sortie   : plusieurs info exemple : nom de tous les tracks et album de l'artiste, nombre de followers...
+# Auteur   : Theo Breton
+# date     : 4/29/2021
+# Version  : V4
+#-------------------------------------------------------------------------------------------
 import sys
 import spotipy    # la librairie pour manipuler l'api spotify
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -41,7 +50,7 @@ if token:
     #Le GET que on utilise pour recuperer tout les albums de l'artiste. 
     albums=sp.artist_albums(artist_uri, album_type=None, country=None, limit=20, offset=0)
     print(albums)
-    #On recupere tout les URI de l'artiste.
+    #On recupere tous les URI des albums de l'artiste.
     all_albums = albums['items']
     for i in all_albums :
         albums_uri = i['uri']
